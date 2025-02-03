@@ -79,6 +79,3 @@ Méthode disconnect a été ajoutée dans PrismaService.ts. Cela permet de ferme
 
 ---
 
-## Auteur
-BISBAU Etienne
-
