@@ -41,7 +41,7 @@ Ce projet est une application de gestion de tâches (Todo List) utilisant **Reac
 
 ### 1. Problème d'accès à Docker
 - Initialement, il était difficile d'accéder au container et de se connecter à la base de données.
-- Solution : Utilisation de `docker exec -it <id_du_container> mysql -u root -p bash` et connexion à la BDD via MySQL.
+- Solution : Utilisation de `docker exec -it <id_du_container> mysql -u root -p` et connexion à la BDD via MySQL.
 
 ### 2. Erreurs dans le backend
 - **Problème avec `UseCaseFactory`** :
