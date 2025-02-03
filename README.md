@@ -68,7 +68,7 @@ Ce projet est une application de gestion de tâches (Todo List) utilisant **Reac
 - **Empêcher la modification si aucun changement n'est fait** ✅
 
 - **Ajout d’une méthode disconnect dans PrismaService.ts :**
-Pour éviter les fuites de connexions et assurer une bonne gestion des ressources, une méthode disconnect a été ajoutée dans PrismaService.ts. Cela permet de fermer proprement la connexion à la base de données lorsque l’application s’arrête.
+Méthode disconnect a été ajoutée dans PrismaService.ts. Cela permet de fermer proprement la connexion à la base de données lorsque l’application s’arrête, pour ainsi éviter les fuites de connexions
 
 ---
 
