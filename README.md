@@ -14,12 +14,12 @@ Ce projet est une application de gestion de tâches (Todo List) utilisant **Reac
 1. Cloner les dépôts forkés sur la machine personnelle.
 2. Installer les dépendances du backend :
    ```sh
-   cd backend
+   cd ..\GitHub\hdm-todo-test-api
    yarn install
    ```
 3. Installer les dépendances du frontend :
    ```sh
-   cd frontend
+   cd ..\GitHub\hdm-todo-test-web-app
    yarn install
    ```
 4. Lancer les containers Docker :
