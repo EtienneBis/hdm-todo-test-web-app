@@ -1,27 +1,81 @@
-# Todo Test Projet
+# Todo List - Test Technique
 
+## Description
+Ce projet est une application de gestion de tâches (Todo List) utilisant **React** pour le frontend et **NestJS** pour le backend, avec **Docker** pour la base de données.
 
-## 1. Description
-Cette application est une Todo List développée en **React** pour le frontend et **NestJS** pour le backend.  
-Elle permet de **créer, éditer et supprimer des tâches**.
+## Installation et Lancement
 
-## 2. Choix techniques
-- **React** pour le frontend car c'est demandé dans le test.
-- **NestJS** pour le backend pour une architecture modulaire et scalable.
-- **TypeScript** pour un typage fort et une meilleure maintenance du code.
+### Prérequis
+- **Docker**
+- **Node.js**
+- **Yarn**
 
-## 3. Défis rencontrés et solutions
-### a) Problème de type avec `UseCases`
-- Erreur `Argument of type 'typeof SaveTaskUseCase' is not assignable...`
-- Solution : Vérification des interfaces et compatibilité entre `SaveTaskUseCase` et `UseCases`.
+### Installation
+1. Cloner les dépôts forkés sur la machine personnelle.
+2. Installer les dépendances du backend :
+   ```sh
+   cd backend
+   yarn install
+   ```
+3. Installer les dépendances du frontend :
+   ```sh
+   cd frontend
+   yarn install
+   ```
+4. Lancer les containers Docker :
+   ```sh
+   docker-compose up -d
+   ```
+5. Démarrer le backend :
+   ```sh
+   yarn start:dev
+   ```
+6. Démarrer le frontend :
+   ```sh
+   yarn dev
+   ```
 
-### b) Communication frontend-backend
-- Difficulté avec les requêtes API et le format des réponses.
-- Solution : Utilisation de `axios` et ajustement des DTO.
+---
 
-## 4. Installation et exécution
-### Backend (NestJS)
-```sh
-cd backend
-npm install
-npm run start
+## Difficultés rencontrées
+
+### 1. Problème d'accès à Docker
+- Initialement, il était difficile d'accéder au container et de se connecter à la base de données.
+- Solution : Utilisation de `docker exec -it <nom_du_container> bash` et connexion à la BDD via MySQL.
+
+### 2. Erreurs dans le backend
+- **Problème avec `UseCaseFactory`** :
+  - Le type `UseCases` n'était pas défini correctement.
+  - Solution : Ajout de `type UseCases = GetAllTasksUseCase | DeleteTask | SaveTaskUseCase;`.
+- **Injection de dépendances incorrecte** :
+  - `TaskRepository` n'était pas correctement injecté dans `TaskController`.
+  - Solution : Correction de l'injection via le constructeur.
+- **Erreur avec `handle(dto)`** :
+  - `SaveTaskDto` était mal reconnu comme paramètre.
+  - Solution : Correction du typage et des DTOs.
+
+### 3. Vérifications dans le frontend
+- Ajout de conditions pour empêcher la validation d'une tâche sans titre.
+- Désactivation du bouton "Modifier" si aucun changement n'est détecté.
+
+---
+
+## Fonctionnalités
+- **Créer une tâche** ✅
+- **Modifier une tâche** ✅
+- **Supprimer une tâche** ✅
+- **Empêcher la validation si le champ est vide** ✅
+- **Empêcher la modification si aucun changement n'est fait** ✅
+
+---
+
+## Livrables
+1. **Dépôts GitHub forkés** ✅
+2. **Ce fichier README.md** ✅
+3. **Vidéo de démonstration de l'application** 🎥
+
+---
+
+## Auteur
+BISBAU Etienne
+
