@@ -28,7 +28,7 @@ Ce projet est une application de gestion de tâches (Todo List) utilisant **Reac
    ```
 5. Démarrer le backend :
    ```sh
-   yarn start:dev
+   yarn run start
    ```
 6. Démarrer le frontend :
    ```sh
