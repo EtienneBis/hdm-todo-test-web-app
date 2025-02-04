@@ -1,7 +1,7 @@
 # Todo Test Projet
 
 ## Description
-Ce projet est une application de gestion de tâches (Todo List) utilisant **React** pour le frontend et **NestJS** pour le backend, avec **Docker** pour la base de données.
+Ce projet est une application de gestion de tâches (Todo List)
 
 ## Installation et Lancement
 
